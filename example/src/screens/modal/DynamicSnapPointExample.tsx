@@ -29,6 +29,7 @@ const DynamicSnapPointExample = () => {
     bottomSheetRef.current?.present();
   }, []);
   const handleDismissPress = useCallback(() => {
+    setCount(state => state + 1);
     bottomSheetRef.current?.dismiss();
   }, []);
   const handleOnLayout = useCallback(
